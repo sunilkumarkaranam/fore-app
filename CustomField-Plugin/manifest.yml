@@ -1,0 +1,11 @@
+modules:
+  jira:issuePanel:
+    - key: customfield-plugin-hello-world-panel
+      function: main
+      title: CustomField-Plugin
+      icon: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+  function:
+    - key: main
+      handler: index.run
+app:
+  id: ari:cloud:ecosystem::app/7536addb-c8ef-42be-8e01-ad37db6966c2
