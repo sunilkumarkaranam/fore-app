@@ -23,7 +23,8 @@ let newbody2 =
       "issueIds": [
         10033
       ],
-      "value": formData.newstory
+      "value":  parseInt(formData.newstory)
+     
     }
   ]
 
