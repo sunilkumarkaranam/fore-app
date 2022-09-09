@@ -21,7 +21,7 @@ let newbody2 =
  
     "fields": {
 
-        "customfield_80": formData.newstory
+        "customfield_080": formData.newstory
 
     }
 
