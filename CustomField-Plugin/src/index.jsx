@@ -21,7 +21,7 @@ let newbody2 =
  
     "fields": {
 
-        "customfield_10033": parseInt(formData.newstory)
+        "customfield_10033": formData.newstory
 
     }
 
@@ -36,9 +36,11 @@ method: `PUT`,
 headers: {
   'Content-Type': 'application/json'
 },
+
 body: JSON.stringify(newbody2)
 
 });
+parseInt(formData.newstory)
 const data2 = await response2.json();
 console.log(data2);
 console.log(await response2.text());
