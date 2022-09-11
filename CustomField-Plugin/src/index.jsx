@@ -33,7 +33,7 @@ headers: {
 },
 
 
-body: JSON.stringify(newbody2)
+body: newbody2
 
 });
 
