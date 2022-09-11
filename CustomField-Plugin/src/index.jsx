@@ -17,14 +17,14 @@ const onSubmit = async (formData) => {
 
 
 let newbody2 =
-`{
+{
  
     "fields": {
 
         "customfield_10033": formData.newstory
 
     }
-}`;
+};
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
 method: `PUT`,
