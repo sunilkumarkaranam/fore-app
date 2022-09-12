@@ -33,11 +33,12 @@ headers: {
 },
 
 
-body: JSON.stringify(newbody2)
+body: newbody2
 
 });
 
 const data2 = await response2.json();
+
 console.log(data2);
 console.log(await response2.text());
 
