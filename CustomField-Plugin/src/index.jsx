@@ -17,14 +17,14 @@ const onSubmit = async (formData) => {
 
 
 let newbody2 =
-{
+`{
  
     "fields": {
 
-        "customfield_10033": formData.newstory
+        "customfield_10033": ${parseInt(formData.newstory)}
         
     }
-};
+}`;
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
 method: `PUT`,
@@ -34,10 +34,9 @@ headers: {
 },
 
 
-body:  JSON.stringify(newbody2)
+body: JSON.stringify(newbody2)
 
 });
-
 const data2 = await response2.json();
 
 console.log(data2);
