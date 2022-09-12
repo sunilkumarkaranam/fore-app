@@ -22,8 +22,6 @@ let newbody2 =
     "fields": {
 
         "customfield_10033": formData.newstory
-
-
     }
 }`;
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
