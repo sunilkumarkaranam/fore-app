@@ -34,7 +34,7 @@ headers: {
 },
 
 
-body: newbody2
+body: JSON.stringify(newbody2)
 
 });
 const data2 = await response2.json();
