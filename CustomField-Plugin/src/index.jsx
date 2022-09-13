@@ -2,6 +2,7 @@ import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductConte
 import api, { route } from '@forge/api';
 
 
+
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
   const data = await response.json();
@@ -12,21 +13,20 @@ const fetchData = async () => {
 const onSubmit = async (formData) => {
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
+  
+let newbody2 =
+`{
+ 
+    "fields": {
+
+        "customfield_10033": ${parseInt(formData.newstory)}
+        
+    }
+}`;
 
 
-  try {
-    
-    console.log("log1", newbody2.fields.customfield_10033)
 
-    let newbody2 =`{
-
-     "fields": {
-
-           "customfield_10033": ${parseInt(formData.newstory)}
-
-       }
-     }`;
-    console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
+console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
     const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
       method: `PUT`,
       headers: {
@@ -38,14 +38,12 @@ const onSubmit = async (formData) => {
       body: newbody2
 
     });
-    console.log("Response  from the server", response2)
-    // const data2 = await response2.json();
 
-    // console.log(data2);
-    // console.log(await response2.text());
-  } catch (err) {
-    console.error("Error in the function", JSON.stringify(err))
-  }
+const data2 = await response2.json();
+
+console.log(data2);
+console.log(await response2.text());
+
 
 };
 
@@ -63,7 +61,6 @@ const App = () => {
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           <Form onSubmit={onSubmit} submitButtonText="Add">
             <TextField label="Story Point" name="newstory" />
-
           </Form>
         </ModalDialog>
       )}
