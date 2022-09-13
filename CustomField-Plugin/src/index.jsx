@@ -15,15 +15,15 @@ const onSubmit = async (formData) => {
   console.log("Data from the Form:" + JSON.stringify(formData));
   
 let newbody2 =
-{
+`{
 
  
   "fields": {
 
-      "customfield_10033": `${formData.newstory}`
+      "customfield_10033": ${formData.newstory}
       } 
       
-  }
+  }`;
 
 
 
