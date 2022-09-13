@@ -17,9 +17,12 @@ const onSubmit = async (formData) => {
 let newbody2 =
 `{
  
-  fields: Object { customfield_10033:  ${parseInt(formData.newstory)}}
-}`;
+  "fields": {
 
+      "customfield_10033": ${parseInt(formData.newstory)}
+      
+  }
+}`;
 
 
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
