@@ -25,6 +25,7 @@ let newbody2 =
 }`;
 
 
+
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
     const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
       method: `PUT`,
