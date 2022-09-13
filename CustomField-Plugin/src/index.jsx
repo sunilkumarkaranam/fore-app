@@ -21,7 +21,7 @@ let newbody2 =
  
   Object { fields: {…} }
   ​
-  fields: Object { customfield_10033: formData.newstory }
+  fields: Object { customfield_10033: ${parseInt(formData.newstory)} }
   ​​
 
 }`;
