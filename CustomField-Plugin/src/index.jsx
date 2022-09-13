@@ -19,7 +19,9 @@ let newbody2 =
  
   "fields": {
 
-      "customfield_10033": ${formData.newstory}
+      "customfield_10033": {
+        "value": ${formData.newstory}
+      } 
       
   }
 }`;
