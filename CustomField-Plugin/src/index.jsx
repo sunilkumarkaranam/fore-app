@@ -38,7 +38,7 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
       },
 
 
-      body: newbody2
+      body: parseInt(newbody2)
 
     });
 
