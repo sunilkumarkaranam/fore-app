@@ -15,7 +15,7 @@ const onSubmit = async (formData) => {
   console.log("Data from the Form:" + JSON.stringify(formData));
   
 let newbody2 =
-`{
+{
  
   "fields": {
 
@@ -24,7 +24,7 @@ let newbody2 =
       } 
       
   }
-}`;
+}
 
 
 
