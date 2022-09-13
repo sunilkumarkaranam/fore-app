@@ -15,21 +15,17 @@ const onSubmit = async (formData) => {
 
 
   try {
-    const newbody2 = {
-      "fields": {
-        "customfield_10033": `${parseInt(formData.newstory)}`,
-      }
-    }
+    
     console.log("log1", newbody2.fields.customfield_10033)
 
-    // let newbody2 =`{
+    let newbody2 =`{
 
-    //   "fields": {
+     "fields": {
 
-    //       "customfield_10033": ${parseInt(formData.newstory)}
+           "customfield_10033": ${parseInt(formData.newstory)}
 
-    //   }
-    // }`
+       }
+     }`;
     console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
     const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
       method: `PUT`,
