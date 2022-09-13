@@ -17,9 +17,9 @@ const onSubmit = async (formData) => {
 let newbody2 =
 `{
  
-  "fields": {
+  fields: {
 
-      "customfield_10033": ${parseInt(formData.newstory)}
+      customfield_10033: ${parseInt(formData.newstory)}
       
   }
 }`;
