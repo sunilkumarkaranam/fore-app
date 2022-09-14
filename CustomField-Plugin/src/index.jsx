@@ -58,7 +58,6 @@ const App = () => {
       <Text>Story Points: {datas}</Text>
 
       <Button text="Change Story point" onClick={() => setOpen(true)} />
-       <Button icon='edit' onClick={async () => {onEdit(datas)}}></Button> 
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           <Form onSubmit={onSubmit} submitButtonText="Add">
@@ -67,7 +66,7 @@ const App = () => {
           </Form>
         </ModalDialog>
       )}
-
+   <Button icon='edit' onClick={async () => {onEdit(datas)}}></Button> 
 
 
     </Fragment>
