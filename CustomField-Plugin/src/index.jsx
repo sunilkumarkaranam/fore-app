@@ -3,7 +3,7 @@ import api, { route } from '@forge/api';
 
 
 
-let datas;
+
 
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
@@ -50,16 +50,43 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 
 };
+const a =0;
+const onDelete = async (datas) => {
+  
+  let newbody3 =
+  `{
+   
+      "fields": {
+  
+          "customfield_10033": ${a}
+          
+      }
+  }`;
 
-let onDelete = async (datas) => {
-  datas =0;
-  console.log("Data to be deleted:" + datas);
-}
+
+  console.log("Delete Story points has invoked = " + JSON.stringify(newbody3));
+  const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
+    method: `PUT`,
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+
+    },
+
+
+    body: newbody3
+
+  });
+
+
+
+
+};
 
 
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
-  [datas] = useState(async () => await fetchData());
+  const [datas] = useState(async () => await fetchData());
   const [isOpen, setOpen] = useState(false);
 
   return (
