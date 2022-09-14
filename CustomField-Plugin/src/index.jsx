@@ -26,6 +26,7 @@ const onSubmit = async (formData) => {
 
 
 
+
 console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
     const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
       method: `PUT`,
@@ -65,6 +66,7 @@ const App = () => {
           </Form>
         </ModalDialog>
       )}
+      <Button icon='trash' onClicik={async () => await onDelete(datas)}></Button>
     </Fragment>
   );
 };
