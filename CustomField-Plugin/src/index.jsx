@@ -26,7 +26,7 @@ let newbody2 =
           "PLUG-1": [
             10033
           ],
-          "value": ${parseInt(formData.newstory)}
+          "value": ${formData.newstory}
 
         }
       ]
