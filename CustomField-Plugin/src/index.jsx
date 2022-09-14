@@ -50,14 +50,14 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 
 };
-const a =0;
-const onDelete = async (a) => {
+
+const onDelete = async () => {
   let newbody3 =
   `{
    
       "fields": {
   
-          "customfield_10033": ${parseInt(a)}
+          "customfield_10033": "0"
           
       }
   }`;
