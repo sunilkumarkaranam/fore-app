@@ -51,8 +51,7 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 };
 const a =0;
-const onDelete = async (datas) => {
-  
+const onDelete = async () => {
   let newbody3 =
   `{
    
@@ -62,10 +61,7 @@ const onDelete = async (datas) => {
           
       }
   }`;
-
-
-  console.log("Delete Story points has invoked = " + JSON.stringify(newbody3));
-  const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
+  const response3 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
     method: `PUT`,
     headers: {
       'Accept': 'application/json',
@@ -77,9 +73,6 @@ const onDelete = async (datas) => {
     body: newbody3
 
   });
-
-
-
 
 };
 
