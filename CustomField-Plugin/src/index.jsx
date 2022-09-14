@@ -3,6 +3,8 @@ import api, { route } from '@forge/api';
 
 
 
+let datas;
+
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
   const data = await response.json();
@@ -49,9 +51,15 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 };
 
+let onDelete = async (datas) => {
+  datas =0;
+  console.log("Data to be deleted:" + datas);
+}
+
+
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
-  const [datas] = useState(async () => await fetchData());
+  [datas] = useState(async () => await fetchData());
   const [isOpen, setOpen] = useState(false);
 
   return (
