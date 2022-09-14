@@ -20,8 +20,16 @@ let newbody2 =
  
   "fields": {
 
-      "customfield_10033": ${parseInt(formData.newstory)}
-      } 
+    
+      } "updates": [
+        {
+          "PLUG-1": [
+            10033
+          ],
+          "value": ${parseInt(formData.newstory)}
+
+        }
+      ]
       
   }`;
 
