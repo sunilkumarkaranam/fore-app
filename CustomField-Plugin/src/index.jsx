@@ -62,13 +62,9 @@ const App = () => {
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           <Form onSubmit={onSubmit} submitButtonText="Add">
             <TextField label="Story Point" name="newstory" />
-          
           </Form>
         </ModalDialog>
       )}
-   <Button icon='edit' onClick={async () => {onEdit(datas)}}></Button> 
-
-
     </Fragment>
   );
 };
