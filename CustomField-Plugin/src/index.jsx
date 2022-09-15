@@ -51,30 +51,11 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 };
 
-const onDelete = async () => {
-  let newbody3 =
-  `{
-   
-      "fields": {
-  
-          "customfield_10033": "0"
-          
-      }
-  }`;
-  const response3 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
-    method: `PUT`,
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-
-    },
 
 
-    body: newbody3
 
-  });
 
-};
+
 
 
 const App = () => {
@@ -89,12 +70,16 @@ const App = () => {
       <Button text="Change Story point" onClick={() => setOpen(true)} />
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
+          
           <Form onSubmit={onSubmit} submitButtonText="Add">
+          <Button onDelete={onDelete} DeleteText="Delete"></Button>
             <TextField label="Story Point" name="newstory" />
           </Form>
         </ModalDialog>
       )}
-      <Button icon='trash' onClicik={async () => await onDelete(datas)}></Button>
+    
+     <Button text="Delete" onClick={async () => {onDelete(datas)}}>
+      </Button> 
     </Fragment>
   );
 };
