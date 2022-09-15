@@ -103,7 +103,7 @@ const App = () => {
         </ModalDialog>
       )}
     
-     <Button text="Delete" onClick={async () => {onDelete()}}>
+     <Button text="Delete Story point" onClick={async () => {onDelete()}}>
       </Button> 
     </Fragment>
   );
