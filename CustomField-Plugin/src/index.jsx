@@ -10,7 +10,7 @@ const fetchData = async () => {
   const data = await response.json();
   return data.fields.customfield_10033;
 }
-const a =0;
+const a =null;
 const onDelete = async () => {
   let newbody3 =
   `{
