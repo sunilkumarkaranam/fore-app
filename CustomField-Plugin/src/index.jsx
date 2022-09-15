@@ -10,7 +10,31 @@ const fetchData = async () => {
   const data = await response.json();
   return data.fields.customfield_10033;
 }
+const onDelete = async () => {
+  let newbody3 =
+  `{
+   
+      "fields": {
+  
+          "customfield_10033": "0"
+          
+      }
+  }`;
 
+  const response3 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
+    method: `PUT`,
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+
+    },
+
+
+    body: newbody3
+
+  });
+
+};
 
 const onSubmit = async (formData) => {
   console.log("Data from the Form:" + formData);
@@ -72,13 +96,13 @@ const App = () => {
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
           <Form onSubmit={onSubmit} submitButtonText="Add">
-          <Button onDelete={onDelete} DeleteText="Delete"></Button>
+         
             <TextField label="Story Point" name="newstory" />
           </Form>
         </ModalDialog>
       )}
     
-     <Button text="Delete" onClick={async () => {onDelete(datas)}}>
+     <Button text="Delete" onClick={async () => {onDelete()}}>
       </Button> 
     </Fragment>
   );
