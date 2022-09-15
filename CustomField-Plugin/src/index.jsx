@@ -10,13 +10,14 @@ const fetchData = async () => {
   const data = await response.json();
   return data.fields.customfield_10033;
 }
+const a =0;
 const onDelete = async () => {
   let newbody3 =
   `{
    
       "fields": {
   
-          "customfield_10033": "0"
+          "customfield_10033": ${a}
           
       }
   }`;
