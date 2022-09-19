@@ -96,11 +96,8 @@ const App = () => {
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
-          <Form onSubmit={onSubmit} submitButtonText="Add">
-          onSubmit={data => {
-              setSize(data.size);
-              setOpen(false);
-            }}
+          <Form onSubmit={onSubmit} submitButtonText="Add" onClick={() => setOpen(false)}>
+         
          
             <TextField label="Story Point" name="newstory" />
           </Form>
