@@ -35,7 +35,7 @@ const onDelete = async () => {
 };
 
 const onSubmit = async (formData) => {
-  setOpen(true);
+  
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
  
@@ -96,7 +96,7 @@ const App = () => {
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
-          <Form onSubmit={onSubmit } submitButtonText="Add">
+          <Form onSubmit={onSubmit} submitButtonText="Add">
          
          
             <TextField label="Story Point" name="newstory" />
