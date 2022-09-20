@@ -14,3 +14,4 @@ permissions:
     - read:jira-work
     - write:jira-work
     - write:issue:jira
+  
