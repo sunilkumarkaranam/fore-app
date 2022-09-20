@@ -2,7 +2,7 @@ import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductConte
 import api, { route } from '@forge/api';
 
 
-const [isOpen, setOpen] = useState(false);
+//const [isOpen, setOpen] = useState(false);
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
   const data = await response.json();
@@ -81,7 +81,7 @@ setOpen(false);
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
- // const [isOpen, setOpen] = useState(false);
+ const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
   return (
     <Fragment>
