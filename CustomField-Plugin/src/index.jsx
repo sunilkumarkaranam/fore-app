@@ -31,6 +31,7 @@ const onDelete = async () => {
 
   });
 
+
 };
 
 const onSubmit = async (formData) => {
@@ -71,6 +72,8 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 // console.log(await response2.text());
 
 
+
+setOpen(false);
 };
 
 
