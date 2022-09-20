@@ -1,6 +1,8 @@
 import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductContext, useState, ButtonSet, Button, ModalDialog, Table, Row, cell, Head, Form } from '@forge/ui';
 import api, { route } from '@forge/api';
 
+
+const [isOpen, setOpen] = useState(false);
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
   const data = await response.json();
@@ -34,7 +36,7 @@ const onDelete = async () => {
 
 };
 
-const onSubmit = async (formData) => { isOpen
+const onSubmit = async (formData) => {
   
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
@@ -79,8 +81,8 @@ setOpen(false);
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
-  const [isOpen, setOpen] = useState(false);
-  const [size, setSize] = useState("medium");
+ // const [isOpen, setOpen] = useState(false);
+  //const [size, setSize] = useState("medium");
   return (
     <Fragment>
       <Text>Story Points: {datas}</Text>
