@@ -34,7 +34,7 @@ const onDelete = async () => {
 
 };
 
-const onSubmit = async (formData) => {
+const onSubmit = async (formData) => { isOpen
   
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
@@ -43,7 +43,7 @@ const onSubmit = async (formData) => {
   `{
    
       "fields": {
-  
+   
           "customfield_10033": ${parseInt(formData.newstory)}
           
       }
@@ -75,13 +75,6 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 
 setOpen(false);
 };
-
-
-
-
-
-
-
 
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
