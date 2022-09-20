@@ -4,7 +4,7 @@ import api, { route } from '@forge/api';
 
 
 
-
+const [isOpen, setOpen] = useState(false);
 
 
 const fetchData = async () => {
@@ -40,7 +40,7 @@ const onDelete = async () => {
 };
 
 const onSubmit = async (formData) => {
-  setOpen(true);
+  
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
   
@@ -89,7 +89,7 @@ setOpen(false);
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
-  const [isOpen, setOpen] = useState(false);
+ 
 
   return (
     <Fragment>
