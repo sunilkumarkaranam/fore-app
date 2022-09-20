@@ -1,12 +1,6 @@
 import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductContext, useState, ButtonSet, Button, ModalDialog, Table, Row, cell, Head, Form } from '@forge/ui';
 import api, { route } from '@forge/api';
 
-
-
-
-
-
-
 const fetchData = async () => {
   const response = await api.asUser().requestJira(route`/rest/api/3/issue/PLUG-1`);
   const data = await response.json();
@@ -76,7 +70,7 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 //console.log(data2);
 // console.log(await response2.text());
 
-setOpen(false);
+
 };
 
 
