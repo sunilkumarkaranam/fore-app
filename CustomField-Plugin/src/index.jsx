@@ -1,5 +1,7 @@
 import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductContext, useState, ButtonSet, Button, ModalDialog, Table, Row, cell, Head, Form } from '@forge/ui';
 import api, { route } from '@forge/api';
+import ForgeUI, { ModalDialog } from '@forge/ui';
+
 
 
 
