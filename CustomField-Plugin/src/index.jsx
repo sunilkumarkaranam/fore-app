@@ -35,7 +35,7 @@ const onDelete = async () => {
 };
 
 const onSubmit = async (formData) => {
-  
+  setOpen(true);
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
  
