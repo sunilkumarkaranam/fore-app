@@ -1,6 +1,6 @@
 import ForgeUI, { render, Fragment, Text, TextField, IssuePanel, useProductContext, useState, ButtonSet, Button, ModalDialog, Table, Row, cell, Head, Form } from '@forge/ui';
 import api, { route } from '@forge/api';
-import ForgeUI, { ModalDialog } from '@forge/ui';
+
 
 
 
@@ -98,7 +98,7 @@ const App = () => {
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
-          <Form onSubmit={onSubmit} submitButtonText="Add" onClick={() => setOpen(false)}>
+          <Form onSubmit={onSubmit} submitButtonText="Add">
          
          
             <TextField label="Story Point" name="newstory" />
