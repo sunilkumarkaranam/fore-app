@@ -87,6 +87,7 @@ const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
   const [isOpen, setOpen] = useState(false);
+  const [size, setSize] = useState("medium");
   return (
     <Fragment>
       <Text>Story Points: {datas}</Text>
@@ -95,7 +96,7 @@ const App = () => {
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
-          <Form onSubmit={onSubmit} submitButtonText="Add">
+          <Form onSubmit={onSubmit => { (submitButtonText="Add"); setOpen(false)}}>
          
          
             <TextField label="Story Point" name="newstory" />
