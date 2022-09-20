@@ -43,7 +43,7 @@ const onSubmit = async (formData) => {
   
   console.log("Data from the Form:" + formData);
   console.log("Data from the Form:" + JSON.stringify(formData));
-  const [isOpen, setOpen] = useState(false);
+ 
   let newbody2 =
   `{
    
@@ -89,7 +89,6 @@ setOpen(false);
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
- 
   const [isOpen, setOpen] = useState(false);
   return (
     <Fragment>
@@ -118,3 +117,5 @@ export const run = render(
     <App />
   </IssuePanel>
 );
+
+
