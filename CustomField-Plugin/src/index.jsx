@@ -96,7 +96,7 @@ const App = () => {
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
-          <Form onSubmit={onSubmit => { (submitButtonText="Add"); setOpen(false)}}>
+          <Form onSubmit={onSubmit } submitButtonText="Add">
          
          
             <TextField label="Story Point" name="newstory" />
@@ -104,7 +104,7 @@ const App = () => {
         </ModalDialog>
       )}
     
-     <Button text="Delete Story point" onClick={async () => {onDelete()}}>
+     <Button text="Delete Story point" onClick={async () => {onDelete()}}>
       </Button> 
     </Fragment>
   );
