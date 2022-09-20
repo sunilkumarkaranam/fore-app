@@ -94,7 +94,7 @@ const App = () => {
     <Fragment>
       <Text>Story Points: {datas}</Text>
 
-      <Button text="Change Story point" onClick={() => setOpen(true)} />
+      <Button text="Change Story point" onClick={() => setOpen(false)} />
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
