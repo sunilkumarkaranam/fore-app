@@ -75,7 +75,7 @@ console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
 //console.log(data2);
 // console.log(await response2.text());
 
-
+setOpen(false);
 };
 
 
@@ -94,7 +94,7 @@ const App = () => {
     <Fragment>
       <Text>Story Points: {datas}</Text>
 
-      <Button text="Change Story point" onClick={() => setOpen(false)} />
+      <Button text="Change Story point" onClick={() => setOpen(true)} />
       {isOpen && (
         <ModalDialog header="Add New Story Point" onClose={() => setOpen(false)}>
           
