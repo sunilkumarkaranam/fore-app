@@ -9,80 +9,84 @@ const fetchData = async () => {
   return data.fields.customfield_10033;
 }
 const a =null;
-const onDelete = async () => {
-  let newbody3 =
-  `{
-   
-      "fields": {
-  
-          "customfield_10033": ${a}
-          
-      }
-  }`;
-
-  const response3 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
-    method: `PUT`,
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json'
-
-    },
-
-
-    body: newbody3
-
-  });
-
-
-};
-
-const onSubmit = async (formData) => {
-  
-  console.log("Data from the Form:" + formData);
-  console.log("Data from the Form:" + JSON.stringify(formData));
- 
-  let newbody2 =
-  `{
-   
-      "fields": {
-   
-          "customfield_10033": ${parseInt(formData.newstory)}
-          
-      }
-  }`;
 
 
 
-
-console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
-    const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
-      method: `PUT`,
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-
-      },
-
-
-      body: newbody2
-
-    });
-
-//const data2 = await response2.json();
-
-//console.log(data2);
-// console.log(await response2.text());
-
-
-
-setOpen(false);
-};
 
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   const [datas] = useState(async () => await fetchData());
- const [isOpen, setOpen] = useState(false);
+  const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
+
+  const onSubmit = async (formData) => {
+  
+    console.log("Data from the Form:" + formData);
+    console.log("Data from the Form:" + JSON.stringify(formData));
+   
+    let newbody2 =
+    `{
+     
+        "fields": {
+     
+            "customfield_10033": ${parseInt(formData.newstory)}
+            
+        }
+    }`;
+  
+  
+  
+  
+  console.log("Body created by the issueid is= " + JSON.stringify(newbody2));
+      const response2 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
+        method: `PUT`,
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+  
+        },
+  
+  
+        body: newbody2
+  
+      });
+  
+  //const data2 = await response2.json();
+  
+  //console.log(data2);
+  // console.log(await response2.text());
+  
+  
+  
+  setOpen(false);
+  };
+
+  const onDelete = async () => {
+    let newbody3 =
+    `{
+     
+        "fields": {
+    
+            "customfield_10033": ${a}
+            
+        }
+    }`;
+  
+    const response3 = await api.asApp().requestJira(route`/rest/api/3/issue/PLUG-1`, {
+      method: `PUT`,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+  
+      },
+  
+  
+      body: newbody3
+  
+    });
+  
+  
+  };
   return (
     <Fragment>
       <Text>Story Points: {datas}</Text>
