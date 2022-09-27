@@ -19,8 +19,8 @@ const App = () => {
   console.log("starting " + datas);
   let[Datas1, setDatas1] = useState();
   console.log("starting 1" + Datas1);
-  Datas1 = datas;
-  console.log("starting 2" + Datas1);
+ // Datas1 = datas;
+  //console.log("starting 2" + Datas1);
   const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
 
@@ -57,9 +57,9 @@ const App = () => {
       });
       //setdatas = async () => await fetchData();
       //Datas1 = formData.newstory;
-      
       setDatas1(formData.newstory);
-     console.log("ending" + Datas1);
+      console.log("ending" + Datas1);
+     
   //const data2 = await response2.json();
   
   //console.log(data2);
