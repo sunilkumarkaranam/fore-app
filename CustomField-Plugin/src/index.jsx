@@ -16,7 +16,11 @@ const a =null;
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
   let [datas, setdatas] = useState(async () => await fetchData());
-  
+  console.log("starting " + datas);
+  let[Datas1, setDatas1] = useState();
+  console.log("starting 1" + Datas1);
+  Datas1 = datas;
+  console.log("starting 2" + Datas1);
   const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
 
@@ -51,9 +55,11 @@ const App = () => {
         body: newbody2
   
       });
-      setdatas = async () => await fetchData();
-     // setdatas(formData.newstory);
-  
+      //setdatas = async () => await fetchData();
+      //Datas1 = formData.newstory;
+      
+      setDatas1(formData.newstory);
+     console.log(Datas1);
   //const data2 = await response2.json();
   
   //console.log(data2);
@@ -92,7 +98,7 @@ const App = () => {
   };
   return (
     <Fragment>
-      <Text>Story Points: {datas}</Text>
+      <Text>Story Points: {Datas1}</Text>
 
       <Button text="Change Story point" onClick={() => setOpen(true)} />
       {isOpen && (
