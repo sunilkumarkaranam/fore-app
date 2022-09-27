@@ -15,7 +15,8 @@ const a =null;
 
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
-  const [datas] = useState(async () => await fetchData());
+  const [datas, setdatas] = useState(async () => await fetchData());
+  
   const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
 
@@ -50,6 +51,8 @@ const App = () => {
         body: newbody2
   
       });
+      setdatas = async () => await fetchData();
+     // setdatas(formData.newstory);
   
   //const data2 = await response2.json();
   
