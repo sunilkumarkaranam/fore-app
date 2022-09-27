@@ -59,7 +59,7 @@ const App = () => {
       //Datas1 = formData.newstory;
       
       setDatas1(formData.newstory);
-     console.log(Datas1);
+     console.log("ending" + Datas1);
   //const data2 = await response2.json();
   
   //console.log(data2);
