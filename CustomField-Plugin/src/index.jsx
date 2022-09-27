@@ -15,7 +15,7 @@ const a =null;
 
 const App = () => {
   console.log(JSON.stringify(useProductContext()));
-  const [datas, setdatas] = useState(async () => await fetchData());
+  let [datas, setdatas] = useState(async () => await fetchData());
   
   const [isOpen, setOpen] = useState(false);
   //const [size, setSize] = useState("medium");
