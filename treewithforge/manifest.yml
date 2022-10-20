@@ -1,0 +1,16 @@
+modules:
+  confluence:globalPage:
+    - key: treewithforge-hello-world
+      resource: main
+      resolver:
+        function: resolver
+      title: treewithforge
+      route: hello-world
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/9c694e0f-ba66-4b91-b8c1-06e195fb6cd1
