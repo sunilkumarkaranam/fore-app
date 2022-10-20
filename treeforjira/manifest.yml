@@ -1,0 +1,15 @@
+modules:
+  jira:globalPage:
+    - key: treeforjira-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: treeforjira
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/f9710abb-3c07-415a-8451-9a56e7bcfd10
