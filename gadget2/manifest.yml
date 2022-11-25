@@ -1,0 +1,15 @@
+modules:
+  jira:globalPage:
+    - key: gadget2-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: gadget2
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/cdf74d4d-4c43-42fe-83a3-3efaa00227ac
