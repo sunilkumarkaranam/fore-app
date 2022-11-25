@@ -1,12 +1,22 @@
-import Resolver from '@forge/resolver';
+import ForgeUI, { DashboardGadgetEdit } from "@forge/ui";
 
-const resolver = new Resolver();
-
-resolver.define('getText', (req) => {
-    console.log(req);
-
-    return 'Hello world!';
-});
-
-export const handler = resolver.getDefinitions();
+import ForgeUI, {
+    render,
+    DashboardGadgetEdit,
+    TextField,
+  } from "@forge/ui";
+  
+  const Edit = () => {
+    const onSubmit = (values) => {
+        return values;
+    }
+  
+    return (
+      <DashboardGadgetEdit onSubmit={onSubmit}>
+        <TextField name="name" label="Say hello to:" />
+      </DashboardGadgetEdit>
+    );
+  };
+  
+  export const runEdit = render(<Edit />);
 
