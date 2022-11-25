@@ -4,6 +4,7 @@ import TextField from '@atlaskit/textfield';
 import Button, { ButtonGroup } from '@atlaskit/button';
 import { view } from '@forge/bridge';
 
+
 function Edit() {
   const onSubmit = (formData) => view.submit(formData);
 

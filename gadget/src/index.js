@@ -1,12 +1,22 @@
-import Resolver from '@forge/resolver';
+import ForgeUI, {
+  render,
+  DashboardGadget,
+  Text,
+  useProductContext,
+} from "@forge/ui";
 
-const resolver = new Resolver();
+const App = () => {
+  const {
+    extensionContext: { gadgetConfiguration },
+  } = useProductContext();
 
-resolver.define('getText', (req) => {
-  console.log(req);
+  return (
+    <DashboardGadget>
+      <Text
+        content={`Hello ${gadgetConfiguration.name || "world"}`}
+      />
+    </DashboardGadget>
+  );
+};
 
-  return 'Hello world!';
-});
-
-export const handler = resolver.getDefinitions();
-
+export const run = render(<App />);
