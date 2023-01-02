@@ -1,0 +1,15 @@
+modules:
+  jira:globalPage:
+    - key: trail-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: trail
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/dc6718ff-6fdf-4231-a427-96327dbe48fa

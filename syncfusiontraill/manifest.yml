@@ -1,0 +1,15 @@
+modules:
+  jira:globalPage:
+    - key: syncfusiontraill-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: syncfusiontraill
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/91f15499-0e2b-42ff-a556-5d11ea87e54d
