@@ -1,17 +1,42 @@
 import React, { useEffect, useState } from 'react';
 import { invoke } from '@forge/bridge';
-
+import { TreeGridComponent, ColumnsDirective, ColumnDirective, DataStateChangeEventArgs, Selection, RowDD, Inject } from "@syncfusion/ej2-react-treegrid";
+import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
+import { issueData, findChildByJql } from "./data/fetchData";
 function App() {
-    const [data, setData] = useState(null);
-
-    useEffect(() => {
-        invoke('getText', { example: 'my-invoke-variable' }).then(setData);
-    }, []);
+   
 
     return (
         <div>
-            {data ? data : 'Loading...'}
-        </div>
+
+           <TreeGridComponent 
+            
+            >  
+             <ColumnsDirective>
+              <ColumnDirective
+                field="key"
+                headerText="Issue Key"
+              ></ColumnDirective>
+              <ColumnDirective
+                field="summary"
+                headerText="Summary"
+              ></ColumnDirective>
+              <ColumnDirective
+                field="issueType"
+                headerText="Issue Type"
+              ></ColumnDirective>
+              <ColumnDirective
+                field="assignee"
+                headerText="Assignee"
+              ></ColumnDirective>
+              <ColumnDirective
+                field="storyPoint"
+                headerText="Story Point"
+              ></ColumnDirective>
+            </ColumnsDirective>
+            <Inject services={[RowDD, Selection]} />
+              </TreeGridComponent>
+      </div>
     );
 }
 
