@@ -63,18 +63,17 @@ function App() {
       <div className="control-pane">
         <div className="control-section">
           <TreeGridComponent
-          dataSource={ issueData }
-            ref={g => treegridIssue = g}
-            //dataSource={dataSource}
-            dataStateChange={handleDataStateChange}
-            treeColumnIndex={0}
-            enableCollapseAll="true"
-            idMapping='key'
-            parentIdMapping="ParentItem"
-            hasChildMapping="isParent"
-            allowRowDragAndDrop={true}
-            childMapping="childIssues"
-            rowDrop={handleRowDrop}
+          ref={g => treegridIssue = g}
+          dataSource={dataSource}
+          dataStateChange={handleDataStateChange}
+          treeColumnIndex={0}
+          enableCollapseAll="true"
+          idMapping='key'
+          parentIdMapping="ParentItem"
+          hasChildMapping="isParent"
+          allowRowDragAndDrop={true}
+          childMapping="childIssues"
+          rowDrop={handleRowDrop}
           >
             <ColumnsDirective>
               <ColumnDirective
