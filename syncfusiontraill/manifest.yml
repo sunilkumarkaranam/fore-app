@@ -11,5 +11,11 @@ modules:
 resources:
   - key: main
     path: static/hello-world/build
+
+    permissions:
+  scopes: [read:jira-work,write:jira-work]
+  content:
+    styles:
+      - 'unsafe-inline'
 app:
   id: ari:cloud:ecosystem::app/91f15499-0e2b-42ff-a556-5d11ea87e54d
