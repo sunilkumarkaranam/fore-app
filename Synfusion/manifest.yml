@@ -1,5 +1,5 @@
 modules:
-  jira:globalPage:
+  jira:adminPage:
     - key: syncfusion-Sunil-hello-world-admin-page
       resource: main
       resolver:
