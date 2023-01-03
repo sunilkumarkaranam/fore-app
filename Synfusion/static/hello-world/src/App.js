@@ -62,17 +62,7 @@ function App() {
       </div>
       <div className="control-pane">
         <div className="control-section">
-          <TreeGridComponent
-            ref={g => treegridIssue = g}
-            dataSource={dataSource}
-           
-            treeColumnIndex={0}
-            enableCollapseAll="true"
-           
-            allowRowDragAndDrop={true}
-           
-           
-          >
+          <TreeGridComponent >
             <ColumnsDirective>
               <ColumnDirective
                 field="key"
