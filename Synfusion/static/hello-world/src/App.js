@@ -63,8 +63,9 @@ function App() {
       <div className="control-pane">
         <div className="control-section">
           <TreeGridComponent
+          dataSource={ issueData }
             ref={g => treegridIssue = g}
-            dataSource={dataSource}
+            //dataSource={dataSource}
             dataStateChange={handleDataStateChange}
             treeColumnIndex={0}
             enableCollapseAll="true"
