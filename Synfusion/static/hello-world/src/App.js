@@ -11,6 +11,9 @@ function App() {
     
           <TreeGridComponent
          dataSource={summaryDat}
+         treeColumnIndex={0}
+         enableCollapseAll="true"
+         allowRowDragAndDrop={true}
           >
             <ColumnsDirective>
               <ColumnDirective
