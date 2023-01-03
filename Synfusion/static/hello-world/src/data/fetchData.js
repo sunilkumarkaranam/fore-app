@@ -7,8 +7,17 @@ exports.summaryDat = [
         issueType: 'Story',
        
         assignee: 'Sunilkumar',
+        storyPoint: '10',
+        subtasks: [
+            {
+                key: 'con-1',
+        summary: 'Test-1',
+        issueType: 'Story',
+       
+        assignee: 'Sunilkumar',
         storyPoint: '10'
-
+            }
+        ]
 
         
       }, {
