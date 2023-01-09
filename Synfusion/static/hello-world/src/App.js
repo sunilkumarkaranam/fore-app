@@ -4,8 +4,11 @@ import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { summaryDat } from "./data/fetchData";
 //import { summaryDat } from './data';
 import './App.css';
+import { render } from 'react-dom';
 
 function App() {
+    allowNodeEditing: boolean = true;
+  //render()
   return (
     <div>
     
@@ -14,10 +17,12 @@ function App() {
          treeColumnIndex={0}
          enableCollapseAll="true"
          allowRowDragAndDrop={true}
+         allowEditing={this.allowNodeEditing}
+         
           >
             <ColumnsDirective>
               <ColumnDirective
-                field="key"
+                field="key" 
                 headerText="Issue Key"
               ></ColumnDirective>
               <ColumnDirective
