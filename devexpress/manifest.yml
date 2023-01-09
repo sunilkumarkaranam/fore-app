@@ -1,0 +1,15 @@
+modules:
+  jira:globalPage:
+    - key: devexpress-hello-world-page
+      resource: main
+      resolver:
+        function: resolver
+      title: devexpress
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+app:
+  id: ari:cloud:ecosystem::app/918abd4a-0850-4d75-b894-6fe384fcf8bb
