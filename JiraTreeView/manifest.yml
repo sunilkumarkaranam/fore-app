@@ -4,7 +4,7 @@ modules:
       resource: main
       resolver:
         function: resolver
-      title: JiraTreeView
+      title: DevExpress
   function:
     - key: resolver
       handler: index.handler

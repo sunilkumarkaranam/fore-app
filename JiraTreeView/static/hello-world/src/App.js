@@ -113,7 +113,7 @@ class App extends React.Component {
           <RowDragging
             onDragChange={this.onDragChange}
             onReorder={this.onReorder}
-            allowDropInsideItem={this.state.allowDropInsideItem}
+         //   allowDropInsideItem={this.state.allowDropInsideItem}
             allowReordering={this.state.allowReordering}
             showDragIcons={this.state.showDragIcons}
           />
@@ -129,11 +129,7 @@ class App extends React.Component {
           <Column dataField="Summary"> <RequiredRule />  </Column>
           <Column dataField="Assignee"> <RequiredRule />  </Column>
           <Column dataField="Priority"> <RequiredRule /> </Column>
-          <Column type="buttons" caption="Actions">
-            <Button name="edit" />
-            <Button name="delete" />
-          </Column>
-          <ColumnChooser enabled={true} allowSearch={allowSearch} mode={mode} />
+        
         </TreeList>
 
         {/* <div className="options">
