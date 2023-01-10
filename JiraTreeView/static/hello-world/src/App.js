@@ -129,11 +129,7 @@ class App extends React.Component {
             showDragIcons={this.state.showDragIcons}
           />
 
-          <Editing
-            allowUpdating={true}
-            allowDeleting={true}
-            allowAdding={true}
-            mode="row" />
+       
 
           <Column allowHiding={false} dataField="Issue_Key"> <RequiredRule /> </Column>
           <Column allowHiding={false} dataField="Issue_Type"> <RequiredRule /> </Column>
