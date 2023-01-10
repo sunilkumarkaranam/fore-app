@@ -109,11 +109,22 @@ class App extends React.Component {
           parentIdExpr="Head_ID"
           onEditorPreparing={this.onEditorPreparing}
           onInitNewRow={this.onInitNewRow}
+         // allowDropInsideItem: true,
+         // allowReordering: true,
+       //   onDragChange(e) {
+        //    const visibleRows = treeList.getVisibleRows();
+          //  const sourceNode = treeList.getNodeByKey(e.itemData.ID);
+            //let targetNode = visibleRows[e.toIndex].node;
+    
+            //while (targetNode && targetNode.data) {
+              //if (targetNode.data.ID === sourceNode.data.ID) {
+                //e.cancel = true;
+                //break;
         >
           <RowDragging
             onDragChange={this.onDragChange}
             onReorder={this.onReorder}
-         //   allowDropInsideItem={this.state.allowDropInsideItem}
+         allowDropInsideItem={this.state.allowDropInsideItem}
             allowReordering={this.state.allowReordering}
             showDragIcons={this.state.showDragIcons}
           />
@@ -129,7 +140,6 @@ class App extends React.Component {
           <Column dataField="Summary"> <RequiredRule />  </Column>
           <Column dataField="Assignee"> <RequiredRule />  </Column>
           <Column dataField="Priority"> <RequiredRule /> </Column>
-        
         </TreeList>
 
         {/* <div className="options">
