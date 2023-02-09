@@ -12,9 +12,9 @@ resources:
   - key: main
     path: static/hello-world/build
 app:
-  id: ari:cloud:ecosystem::app/4da0c6dc-dedb-4971-a2ae-92dbe3759c0d
+  id: ari:cloud:ecosystem::app/8a5ee501-b69e-4e8f-a4b9-b3376e12327d
 permissions:
-  scopes: [read:jira-work,write:jira-work]
+  scopes: [ read:jira-work, write:jira-work ]
   content:
     styles:
       - unsafe-inline

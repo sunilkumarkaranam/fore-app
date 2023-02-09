@@ -1,0 +1,23 @@
+modules:
+  jira:dashboardGadget:
+    - key: widget-hello-world-gadget
+      title: widget
+      description: A hello world dashboard gadget.
+      thumbnail: https://developer.atlassian.com/platform/forge/images/icons/issue-panel-icon.svg
+      resource: main
+      resolver:
+        function: resolver
+      edit:
+        resource: main
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/hello-world/build
+permissions:
+  content:
+    styles:
+      - unsafe-inline
+app:
+  id: ari:cloud:ecosystem::app/55b6b83c-f94e-4b25-905b-77827de51be3
