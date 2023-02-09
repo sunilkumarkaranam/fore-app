@@ -19,10 +19,7 @@ export const fetchIssueList = async() =>{
     const data = await res.json();
     console.log("4 inside fetchIssueList: ",JSON.stringify(data));
     return data;
-    /*if(data.length > 0)
-    {
-      return await res.json();
-    }*/
+   
 }
 
 // export const issues = fetchIssueList().then(result => 

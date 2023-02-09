@@ -41,7 +41,11 @@ class App extends React.Component {
       debugger;
           let item = {
                 ID: element.id,
-                Head_ID: -1,
+                Head_ID:  (element.fields.issuelinks.length != 0
+
+                  ? element.fields.issuelinks[0].hasOwnProperty("outwardIssue")
+  
+                  ? element.fields.issuelinks[0].outwardIssue.id : -1 : -1),
                 Issue_Key: element.key,
                 Issue_Type: element.fields.issuetype.name,
                 Summary: element.fields.summary,
@@ -137,7 +141,8 @@ class App extends React.Component {
           <Column dataField="Assignee"> <RequiredRule />  </Column>
           <Column dataField="Priority"> <RequiredRule /> </Column>
         </TreeList>
-
+       
+  
         {/* <div className="options">
           <div className="caption">Options</div>
           <div className="options-container">

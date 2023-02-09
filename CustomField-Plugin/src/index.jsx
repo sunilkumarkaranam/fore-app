@@ -65,8 +65,7 @@ const App = () => {
   //console.log(data2);
   // console.log(await response2.text());
   
-  
-  
+
   setOpen(false);
   };
 
